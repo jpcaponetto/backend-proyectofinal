@@ -2,6 +2,7 @@ export const envi = {
   mode: process.env.MODE,
   port: process.env.PORT,
   host: process.env.HOST,
+  env: process.env.ENVIROMENT,
   mongo: {
     dbname: process.env.DBNAME,
     user: process.env.USERDB,
