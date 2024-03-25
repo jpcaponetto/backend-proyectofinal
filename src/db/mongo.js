@@ -7,7 +7,7 @@ export default class MongoSingleton {
   static logger = getLogger();
   constructor() {
     const { URI } = envi.mongo;
-    const MONGO_URI = URI;
+    const MONGO_URI = process.env.URI || URI;
 
     try {
       this.connection = mongoose.connect(MONGO_URI);
