@@ -1,13 +1,12 @@
 import mongoose from "mongoose";
 import { getLogger } from "../utils/logger.js";
-import { envi } from "../../env.js";
 import { DBConnected, DBError } from "../utils/messages.js";
+import { envi } from "../env.js";
 
 export default class MongoSingleton {
   static logger = getLogger();
   constructor() {
-    const { URI } = envi.mongo;
-    const MONGO_URI = process.env.URI || URI;
+    const MONGO_URI = process.env.URI || envi.mongo.uri;
 
     try {
       this.connection = mongoose.connect(MONGO_URI);

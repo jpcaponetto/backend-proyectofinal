@@ -1,7 +1,7 @@
 import winston from "winston";
 import { envi } from "../env.js";
 
-const NODE_ENV = envi.api.env || "DEV";
+const NODE_ENV = envi.env || "DEV";
 
 const customLevelsOptions = {
   levels: {
