@@ -8,7 +8,7 @@ export const envi = {
     user: process.env.USERDB,
     password: process.env.PASSWORDDB,
     cluster: process.env.CLUSTER,
-    uri: process.env.MONGOURI,
+    uri: `mongodb+srv://${process.env.USERDB}:${process.env.PASSWORDDB}@${process.env.cluster}/${process.env.DBNAME}?retryWrites=true&w=majority`,
   },
   cookie: {
     secret: process.env.SECRET,

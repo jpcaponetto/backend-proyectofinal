@@ -4,3 +4,13 @@ export const ServerRunning = (port) => {
   const logger = getLogger();
   logger.info(`Server running on ${port}`);
 };
+
+export const DBConnected = () => {
+  const logger = getLogger();
+  logger.info("Conectado a la base de datos");
+};
+
+export const DBError = (error) => {
+  const logger = getLogger();
+  logger.error(`Error en Base de Datos: ${error}`);
+};
