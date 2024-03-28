@@ -14,3 +14,8 @@ export const DBError = (error) => {
   const logger = getLogger();
   logger.error(`Error en Base de Datos: ${error}`);
 };
+
+export const LoggerMessage = (message) => {
+  const logger = getLogger();
+  logger.warn(message);
+};
