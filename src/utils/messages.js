@@ -19,3 +19,8 @@ export const LoggerMessage = (message) => {
   const logger = getLogger();
   logger.warn(message);
 };
+
+export const LoggerError = (error) => {
+  const logger = getLogger();
+  logger.error(error);
+};

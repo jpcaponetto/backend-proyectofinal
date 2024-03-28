@@ -2,6 +2,7 @@ import UserDto from "../dto/user.dto.js";
 import AuthService from "";
 import { createUser } from "../validations/user.validation.js";
 import { cookieOptions } from "../utils/cookieOptions.js";
+import { LoggerError } from "../utils/messages.js";
 
 export default class AuthController {
   static register = async (body, res) => {
@@ -26,7 +27,10 @@ export default class AuthController {
       res.cookie("token", token, cookieOptions);
       return res.status(200).json({ token });
     } catch (error) {
-      return res.status(400).json({ message: "User or password invalid" });
+      LoggerError(error);
+      return res
+        .status(400)
+        .json({ message: "User or password invalid", error });
     }
   };
 }
