@@ -12,6 +12,7 @@ export default class AuthService {
   static login = async (password, user) => {
     const checkPassword = comparePassword(password, user.password);
     const userInfo = {
+      id: user._id,
       firstName: user.id,
       lastName: user.lastName,
       role: user.role,
