@@ -5,10 +5,10 @@ import { Authenticate } from "../../config/middleware/passport.mid.js";
 import UserController from "../../controllers/user.controller.js";
 const router = Router();
 
-router.patch("/premium/:id", (req, res, next) => {
+router.patch("/premium/:id", async (req, res, next) => {
   const { id } = req.params;
   try {
-    UserController.upgradeToPremium(id);
+    await UserController.upgradeToPremium(id);
     res.status(201).json({ message: "User upgraded to premium" });
   } catch (error) {
     next(error);

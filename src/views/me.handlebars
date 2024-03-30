@@ -1,7 +1,7 @@
 <div class="container">
-  <h3>Welcome back, {{user.firstName}} </h3>
-  <br />
-  <article>
+  <article style="margin-top: 5rem;">
+    <h3 style="text-align: center;">Welcome back, {{user.firstName}} </h3>
+    <hr />
     <p><strong><h3 style="display: inline;">First Name:</h3> </strong>
       <h5 style="display: inline;">{{user.firstName}}</h5></p>
     <p><strong><h3 style="display: inline;">Last Name:</h3> </strong>
@@ -13,4 +13,10 @@
     <p><strong><h3 style="display: inline;">Age:</h3> </strong>
       <h5 style="display: inline;">{{user.age}}</h5></p>
   </article>
+  <hr />
+  <a
+    type="button"
+    href="/auth/sign-out"
+    style="display: flex; justify-content: center;"
+  > Sign Out</a>
 </div>

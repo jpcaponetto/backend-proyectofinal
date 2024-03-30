@@ -18,5 +18,12 @@ router.get("/sign-up", (req, res) => {
 router.get("/me", Authenticate("jwt"), (req, res) => {
   res.render("me", { user: req.user });
 });
+router.get("/signInFailed", (req, res) => {
+  res.render("signInFailed");
+});
+
+router.get("/signUpSuccessfully", (req, res) => {
+  res.render("signUpSuccessfully");
+});
 
 export default router;
