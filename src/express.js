@@ -7,6 +7,7 @@ import { __dirname } from "./path.js";
 import apiRoutes from "./routes/api/index.routes.js";
 import passport from "passport";
 import { InitPassport } from "./config/passport.js";
+import { errorHandling } from "./utils/globalErrorHandling.js";
 const { secret } = envi.cookie;
 const app = express();
 const secretcookie = process.env.SK || secret;
@@ -29,6 +30,6 @@ app.get("/", (req, res) => {
   res.render("welcome");
 });
 
-app.use((req, res, next) => {});
-
+app.use("/", viewRoutes);
+app.use(errorHandling);
 export default app;
