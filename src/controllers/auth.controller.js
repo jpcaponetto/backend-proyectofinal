@@ -1,5 +1,5 @@
 import UserDto from "../dto/user.dto.js";
-import AuthService from "";
+import AuthService from "../services/auth.service.js";
 import { createUser } from "../validations/user.validation.js";
 import { cookieOptions } from "../utils/cookieOptions.js";
 

@@ -8,6 +8,7 @@ import apiRoutes from "./routes/api/index.routes.js";
 import passport from "passport";
 import { InitPassport } from "./config/passport.js";
 import { errorHandling } from "./utils/globalErrorHandling.js";
+import viewRoutes from "./routes/views/index.routes.js";
 const { secret } = envi.cookie;
 const app = express();
 const secretcookie = process.env.SK || secret;
@@ -26,9 +27,9 @@ InitPassport();
 app.use(passport.initialize());
 app.use("/api", apiRoutes);
 
-app.get("/", (req, res) => {
-  res.render("welcome");
-});
+// app.get("/", (req, res) => {
+//   res.render("welcome");
+// });
 
 app.use("/", viewRoutes);
 app.use(errorHandling);

@@ -1,5 +1,3 @@
-import Joi from "joi";
-
 export const createUser = (body) => {
   const userModel = Joi.object({
     firstName: Joi.string().required(),
