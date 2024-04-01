@@ -27,10 +27,6 @@ InitPassport();
 app.use(passport.initialize());
 app.use("/api", apiRoutes);
 
-// app.get("/", (req, res) => {
-//   res.render("welcome");
-// });
-
 app.use("/", viewRoutes);
 app.use(errorHandling);
 export default app;
