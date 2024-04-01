@@ -13,7 +13,7 @@ export default class AuthService {
     const checkPassword = comparePassword(password, user.password);
     const userInfo = {
       id: user._id,
-      firstName: user.id,
+      firstName: user.firstName,
       lastName: user.lastName,
       role: user.role,
       email: user.email,
