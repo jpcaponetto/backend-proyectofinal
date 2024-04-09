@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Admin</h1>
+  <hr />
+  <nav>
+    <ul>
+      <li><h3><strong>Bienvenido,
+            <span id="user">{{firstName}}</span></strong></h3></li>
+    </ul>
+    <ul>
+      <li><a href="/api/sessions/auth/logout" role="button">
+          Cerrar Sesion
+        </a></li>
+      <li><a href="/me" role="button">Inicio</a></li>
+    </ul>
+  </nav>
+
+  <div id="products">
+
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/admin.js"></script>
